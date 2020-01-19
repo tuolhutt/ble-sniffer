@@ -5,9 +5,9 @@ from subprocess import Popen,PIPE
 import time,json,os,commands
 
 hci = "hci0"
-homeFile="home.conf"
+homeFile="home_ruuvi.conf"
 
-tcSensors,tcSensors2 = [[],[]]
+tcSensors,tcSensors2 = [],[]
 
 command = ['sudo', 'hcidump', '-i', hci, '--raw']
 command2 = "sudo hcitool -i "+hci+" lescan --whitelist --duplicates > /dev/null &"
